@@ -21,6 +21,6 @@
   "devDependencies": {
     "express": "2.5.x"
   },
-  "main": "lib/handler",
+  "main": "lib/templates",
   "optionalDependencies": {}
 }
