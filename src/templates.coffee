@@ -27,7 +27,7 @@ module.exports = (options) ->
         opts = 
           client: true
           compileDebug: not production
-          filename: filename
+          filename: path.join dir, filename
         templates[key] = jade.compile(template, opts).toString()
     templates
   
