@@ -8,7 +8,8 @@ module.exports = (options) ->
   options.namespace or= "window.templates"
   options.url or= "/templates.js"
   options.src or= process.join process.cwd(), "templates"
-  runtime = fs.readFileSync('../node_modules/jade/runtime.js').toString()
+  runtimePath = path.join __dirname, "..", "node_modules", "jade", "runtime.js"
+  runtime = fs.readFileSync(runtimePath).toString()
   
   templates = null  
   
