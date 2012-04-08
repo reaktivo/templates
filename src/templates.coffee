@@ -14,6 +14,8 @@ module.exports = (options) ->
   templates = null  
   
   refresh = (dir = "", templates = {}) ->
+    prevDir = process.cwd()
+    process.chdir(options.src)
     dirpath = path.join options.src, dir
     fs.readdirSync(dirpath).forEach (filename) ->
       filepath = path.join options.src, dir, filename
@@ -29,6 +31,7 @@ module.exports = (options) ->
           compileDebug: not production
           filename: path.join dir, filename
         templates[key] = jade.compile(template, opts).toString()
+    process.chdir prevDir
     templates
   
   build = ->
