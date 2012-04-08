@@ -45,7 +45,7 @@ module.exports = (options) ->
           walk(p, template)
     walk("#{options.namespace}", refresh())
     str = unescape str
-    unless production
+    if production
       parser = require('uglify-js').parser
       uglify = require('uglify-js').uglify
       ast = parser.parse(str)
