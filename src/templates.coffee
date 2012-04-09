@@ -7,8 +7,8 @@ production = (process.env.NODE_ENV is not "production")
 module.exports = (options) ->
   options.namespace or= "window.templates"
   options.url or= "/templates.js"
-  options.src or= process.join process.cwd(), "templates"
-  runtimePath = path.join __dirname, "..", "node_modules", "jade", "runtime.js"
+  options.src or= path.join process.cwd(), "templates"
+  runtimePath = path.join __dirname, 'runtime.js'
   runtime = fs.readFileSync(runtimePath).toString()
   
   templates = null  
