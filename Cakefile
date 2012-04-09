@@ -10,7 +10,10 @@ build = (callback) ->
     throw new Error(err) if err
     exec "coffee --bare --compile --output lib/ src/", (err, stdout, stderr) ->
       throw new Error(err) if err
-      callback() if callback
+      exec 'cp node_modules/jade/runtime.js lib/runtime.js', (err, stdout, stderr) ->
+        throw new Error(err) if err
+        callback() if callback
+
 
 removeJS = (callback) ->
   exec 'rm -fr lib/', (err, stdout, stderr) ->
