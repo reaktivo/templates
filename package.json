@@ -15,8 +15,8 @@
     "node": ">=0.4.2"
   },
   "dependencies": {
-    "jade": "~0.22.1",
-    "uglify-js": "~1.2.6"
+    "jade": "~1.11.0",
+    "uglify-js": "~3.3.22"
   },
   "devDependencies": {},
   "main": "lib/templates",
