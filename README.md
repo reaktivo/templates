@@ -1,5 +1,7 @@
 # Templates
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/reaktivo/templates.svg)](https://greenkeeper.io/)
+
 Templates is a jade template prepackager for [Express](http://expressjs.com), inspired by [Jammit](http://documentcloud.github.com/jammit)
 Templates is written in coffeescript by [Marcel Miranda](http://reaktivo.com).
 
